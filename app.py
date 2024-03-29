@@ -54,3 +54,4 @@ def colorPicks():
         else:
             print(f"Couleur invalide ! Voici les couleurs: {colors}")
     return picked
+
