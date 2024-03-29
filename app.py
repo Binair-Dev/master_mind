@@ -1,31 +1,24 @@
+
+
 def evaluer(couleur):
     check = []
     for _ in range(5):
         check.append(colorPick())
 
+    check1 = set()
     check2 = []
-    for res in couleur:
-        for choice in check:
-            if res == choice:
-                check2.append(choice)
+    for i, res in enumerate(check):
+        for j,resp in enumerate(couleur):
+            if res[i] == resp[j]:
+                check1.add(res[i])
+            elif res in check:
+                check2.append(res)
 
-    resultat = len(check2)
-    if resultat == 4:
+    if len(check1) == 3:
         return True
+    elif check2:
+        return check2
     else:
         return False
 
 
-
-
-
-
-
-
-
-
-    return check
-
-3 = COULEUR MASTERMIND
-ENTREE TABLEAU
-SORTIE = VRAI
